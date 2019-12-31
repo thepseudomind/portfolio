@@ -1,0 +1,44 @@
+.tools{
+    position: relative;
+
+    &__img{
+        width: 30%;
+        position: absolute;
+        animation: oscillate 2s ease-out none infinite;
+
+        &--1{
+            top: 0;
+            left: -1rem;
+        }
+
+        &--2{
+            top: -10rem;
+            left: 20rem;
+        }
+
+        &--3{
+            top: 1rem;
+            right: 0;
+        }
+
+        &--4{
+            top: 20rem;
+            left: -3rem;
+        }
+        
+        &--5{
+            top: 32rem;
+            left: 20rem;
+        }
+
+        &--6{
+            top: 20rem;
+            left: 40rem;
+        }
+
+        &--7{
+            top: 10rem;
+            left: 20rem;
+        }
+    }
+}

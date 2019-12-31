@@ -1,0 +1,14 @@
+.darkmode{
+    &__toggle{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 25%;
+        background-color: white;
+        position: fixed;
+        bottom: 2rem;
+        left: 2rem;
+        box-shadow: 0 .5rem 1rem rgba(black, .2);
+        z-index: 700;
+        cursor: pointer;
+    }
+}

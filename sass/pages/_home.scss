@@ -1,0 +1,30 @@
+.about{
+    margin-top: 1rem;
+    padding: 20rem 0 25rem 0;
+    border-radius: .5rem;
+    // background:linear-gradient(90deg, #00c3ff 0%,#ffff1c 100%);
+    background:linear-gradient(90deg, #ff8008 0%,#ffc837 100% );
+}
+
+.projects{
+    margin-top: 1rem;
+    padding: 15rem 0 20rem 0;
+    border-radius: .5rem;
+    // background:linear-gradient(90deg, #cc2b5e 0%,#753a88 100% );
+    background:linear-gradient(90deg, #ee9ca7 0%,#ffdde1 100% );
+    transition: all .3s;
+}
+
+.contact{
+    margin-top: 1rem;
+    padding: 30rem 0;
+    border-radius: .5rem;
+    background:linear-gradient(90deg, #ece9e6 0%,#ffffff 100% );
+}
+
+.footer{
+    margin-top: 1rem;
+    padding: 2.5rem 0;
+    border-radius: .5rem;
+    background:linear-gradient(90deg, #536976 0%,#292e49 100% );
+}

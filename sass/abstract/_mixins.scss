@@ -1,0 +1,34 @@
+@mixin clearfix {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+//REPONSIVE DESIGN
+@mixin respond($device) {
+    @if $device == phone {
+       @media (max-width: 37.5em) {
+           @content;
+       } 
+    }
+
+    @if $device == tab-port {
+        @media (max-width: 50em) {
+            @content;
+        } 
+    }
+
+    @if $device == tab-land {
+        @media (max-width: 75em) {
+            @content;
+        } 
+    }
+
+    @if $device == big-desk {
+        @media (max-width: 112.5em) {
+            @content;
+        } 
+    }
+}

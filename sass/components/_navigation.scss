@@ -1,0 +1,86 @@
+.navigation{
+    &__checkbox{
+        display: none;
+    }
+
+    &__background{
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        background:linear-gradient(90deg, #feac5e 0%,#c779d0 50%,#4bc0c8 100% );
+        position: fixed;
+        top: 6rem;
+        right: 7rem;
+        z-index: 1000;
+        transition: all .3s;
+    }
+
+    &__toggle{
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        background-color: white;
+        position: fixed;
+        top: 5.5rem;
+        right: 6.5rem;
+        box-shadow: 0 .5rem 1rem rgba(black, .2);
+        z-index: 1500;
+        cursor: pointer;
+    }
+
+    &__icon, &__icon::before, &__icon::after{
+        display: inline-block;
+        width: 3rem;
+        height: .2rem;
+        background-color: #333;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .2s;
+    }
+
+    &__icon::before, &__icon::after{
+        content: "";
+        display: inline-block;
+    }
+
+    &__icon::before{
+        top: -.5rem;
+    }
+
+    &__icon::after{
+        top: .7rem;
+    }
+
+    //ACTIONS AND EFFECTS
+    &__checkbox:checked ~ &__background{
+        transform: scale(50);
+    }
+
+    &__checkbox:checked ~ &__toggle &__icon{
+        background-color: transparent;
+    }
+
+    &__checkbox:checked ~ &__toggle &__icon::before{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &__checkbox:checked ~ &__toggle &__icon::after{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(315deg);
+    }
+
+    &__toggle:hover &__icon::before{
+        top: -.7rem;;
+    }
+
+    &__toggle:hover &__icon::after{
+        top: .9rem;;
+    }
+}

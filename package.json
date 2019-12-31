@@ -1,0 +1,17 @@
+{
+  "name": "oderindeolayemi",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "node-sass sass/main.scss css/index.css -w"
+  },
+  "author": "Oderinde Olayemi",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.11"
+  }
+}
