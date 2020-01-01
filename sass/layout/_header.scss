@@ -1,33 +1,86 @@
 .header{
-    height: 85vh;
+    height: 80vh;
+    width: 100%;
     border-radius: .5rem;
     background:linear-gradient(90deg, #a1ffce 0%,#faffd1 100% );
-    // background-image: url('../../img/night.gif');
-    // background-size: cover;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: all .2s ease;
 
-    &__content{
-        padding-top: 17.5rem;
+    @include respond(phone){
+        height: 70vh;
     }
 
+    &__content{
+        width: 114rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &--left, &--right{
+            flex: 0 0 45%;
+            
+            @include respond(phone){
+                display: flex;
+                flex: 0 0 75%;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &--right{
+            display: flex;
+            justify-content: center;
+
+            @include respond(phone){
+                display: none;
+            }
+        }
+    }
+
+
     &__text{
+        @include respond(phone){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
         &--greeting{
             display: inline-block;
             font-size: 4rem;
             margin-bottom: 1rem;
+
+            @include respond(phone){
+                font-size: 3.5rem;
+                margin-bottom: .5rem;
+            }
         }
 
         &--title{
             display: inline-block;
             font-size: 5rem;
             line-height: 1;
+
+            @include respond(phone){
+                text-align: center;
+                font-size: 4rem;
+            }
         }
 
         &--subtitle{
             display: inline-block;
             font-size: 2.5rem;
             font-family: 'Share Tech Mono', monospace;
+
+            @include respond(phone){
+                text-align: center;
+                font-size: 2rem;
+            }
         }
     }
 
@@ -47,7 +100,7 @@
     }
 
     &__img{
-        transform: translateY(-20rem);
         width: 100%;
+        height: 100%;
     }
 }

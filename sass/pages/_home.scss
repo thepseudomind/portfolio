@@ -4,6 +4,41 @@
     border-radius: .5rem;
     // background:linear-gradient(90deg, #00c3ff 0%,#ffff1c 100%);
     background:linear-gradient(90deg, #ff8008 0%,#ffc837 100% );
+    display: flex;
+    transition: all .2s ease;
+
+    @include respond(phone){
+        padding-bottom: 10rem;
+    }
+
+    &__content{
+        width: 114rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+
+        @include respond(phone){
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__description, &__tools{
+        flex: 0 0 45%;
+    }
+
+    &__description{
+        @include respond(phone){
+            width: 85%;
+            text-align: center;
+        }
+    }
+
+    // &__tools{
+    //     @include respond(phone){
+    //         display: none;
+    //     }
+    // }
 }
 
 .projects{
@@ -13,6 +48,21 @@
     // background:linear-gradient(90deg, #cc2b5e 0%,#753a88 100% );
     background:linear-gradient(90deg, #ee9ca7 0%,#ffdde1 100% );
     transition: all .3s;
+
+    &__row{
+        margin: 0 auto;
+        width: 114rem;
+        display: flex;
+        justify-content: space-around;
+
+        @include respond(phone){
+            width: 90%;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    
 }
 
 .contact{
@@ -24,7 +74,9 @@
 
 .footer{
     margin-top: 1rem;
-    padding: 2.5rem 0;
+    padding: 1rem 0;
     border-radius: .5rem;
     background:linear-gradient(90deg, #536976 0%,#292e49 100% );
+    text-align: center;
+    color: white;
 }

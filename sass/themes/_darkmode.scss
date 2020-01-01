@@ -10,5 +10,14 @@
         box-shadow: 0 .5rem 1rem rgba(black, .2);
         z-index: 700;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--icon{
+            width: 3rem;
+            height: 3rem;
+            transition: all .2s ease;
+        }
     }
 }

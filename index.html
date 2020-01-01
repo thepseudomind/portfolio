@@ -10,9 +10,15 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <!-- POPUP VIDEO -->
+    <div class="video-popup" id="preview">
+        <video class="video" controls autoplay></video>
+        <a href="#" class="video-popup__close">X</a>
+    </div>
+
     <!-- NAVIGATION SYSTEM -->
     <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="toggle">
+        <input type="checkbox" class="navigation__checkbox" id="toggle" />
         <label for="toggle" class="navigation__toggle">
             <span class="navigation__icon"></span>
         </label>
@@ -21,60 +27,68 @@
 
     <!-- THEMING SYSTEM -->
     <div class="darkmode">
-        <div class="darkmode__toggle"></div>
+        <div class="darkmode__toggle">
+            <img src="./img/half-moon (1).png" alt="Moon" class="darkmode__toggle--icon">
+        </div>
     </div>
 
     <header class="header">
         <div class="header__content">
-            <div class="row">
-                <div class="col-1-of-2">
-                    <h1 class="header__text">
-                        <span class="header__text--greeting">
-                            👋 Hi, 
-                        </span>
-                        <span class="header__text--title u-mb-small">
-                            I'm Oderinde Olayemi
-                        </span>
-                        <span class="header__text--subtitle u-mb-medium" id="text">
-                            i'm a front end developer who designs beautiful user interfaces and web apps.
-                        </span>
-                    </h1>
-                    <div class="header__icons">
-                        <span class="header__icons--icon"><i class="fab fa-github"></i></span>
-                        <span class="header__icons--icon"><i class="fab fa-twitter"></i></span>
-                        <span class="header__icons--icon"><i class="fab fa-linkedin-in"></i></span>
-                        <span class="header__icons--icon"><i class="fab fa-instagram"></i></span>
-                    </div>
+            <div class="header__content--left">
+                <h1 class="header__text">
+                    <span class="header__text--greeting">
+                        👋 Hi, 
+                    </span>
+                    <span class="header__text--title u-mb-small">
+                        I'm Oderinde Kehinde
+                    </span>
+                    <span class="header__text--subtitle u-mb-small" id="text">
+                        i'm a front end developer who designs beautiful user interfaces and web apps.
+                    </span>
+                </h1>
+                <div class="header__icons">
+                    <span class="header__icons--icon"><i class="fab fa-github"></i></span>
+                    <span class="header__icons--icon"><i class="fab fa-twitter"></i></span>
+                    <span class="header__icons--icon"><i class="fab fa-linkedin-in"></i></span>
+                    <span class="header__icons--icon"><i class="fab fa-instagram"></i></span>
                 </div>
-                <!-- <div class="col-1-of-2 u-center-text">
-                    <img src="img/me.png" alt="Me" class="header__img">
-                </div> -->
+            </div>
+            <div class="header__content--right">
+                <img src="img/ME.png" alt="Me" class="header__img">
             </div>
         </div>
     </header>
     <main>
         <section class="about">
-            <div class="row">
-                <div class="col-1-of-2">
+            <div class="about__content">
+                <div class="about__description">
                     <h2 class="section__text section__text--white">
                         <span class="section__text--title u-mb-medium">
                             about me
                         </span>
                         <span class="section__text--subtitle">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, maiores accusantium magnam facilis sint repudiandae officiis incidunt ab nam velit perspiciatis ipsum, aut aperiam sapiente quia iure dicta omnis sed.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, maiores accusantium magnam facilis sint repudiandae officiis incidunt ab nam velit perspiciatis ipsum, aut aperiam sapiente quia iure dicta omnis sed.
+                            Based in Lagos, Nigeria. I love building beautiful user interfaces and web applications that appeal to the end user. I mostly use HTML5, CSS and SASS, JavaScript and ReactJS (if i have to) to build my applications. I also have some experience using Flutter to build cross-platform mobile apps, other tools i'm familiar with include Jest and Enzyme for testing, TypeScript, WebPack, Parcel, PostgreSQL, NextJS and many more. <br/>Enough talk, let's see my projects.  
                         </span>
                     </h2>
                 </div>
-                <div class="col-1-of-2">
+                <div class="about__tools">
                     <div class="tools">
                         <img src="img/icons8-angularjs-500.png" alt="Angular" class="tools__img tools__img--1">
-                        <img src="img/icons8-css3-500.png" alt="Angular" class="tools__img tools__img--2">
-                        <img src="img/icons8-javascript-500.png" alt="Angular" class="tools__img tools__img--3">
-                        <img src="img/icons8-firebase-500.png" alt="Angular" class="tools__img tools__img--4">
-                        <img src="img/icons8-html-5-500.png" alt="Angular" class="tools__img tools__img--5">
-                        <img src="img/icons8-react-native-500.png" alt="Angular" class="tools__img tools__img--6">
-                        <img src="img/icons8-developer-500.png" alt="Angular" class="tools__img tools__img--7">
+                        <img src="img/icons8-css3-500.png" alt="CSS3" class="tools__img tools__img--2">
+                        <img src="img/icons8-javascript-500.png" alt="Javascript" class="tools__img tools__img--3">
+                        <img src="img/icons8-firebase-500.png" alt="Firebase" class="tools__img tools__img--4">
+                        <img src="img/icons8-html-5-500.png" alt="HTML5" class="tools__img tools__img--5">
+                        <img src="img/icons8-react-native-500.png" alt="ReactNative" class="tools__img tools__img--6">
+                        <img src="img/icons8-developer-500.png" alt="Oderinde Kehinde" class="tools__img tools__img--7">
+                    </div>
+                    <div class="tools-mobile">
+                        <img src="img/icons8-angularjs-500.png" alt="Angular" class="tools-mobile__img tools-mobile__img--1">
+                        <img src="img/icons8-css3-500.png" alt="CSS3" class="tools-mobile__img tools-mobile__img--2">
+                        <img src="img/icons8-javascript-500.png" alt="Javascript" class="tools-mobile__img tools-mobile__img--3">
+                        <img src="img/icons8-firebase-500.png" alt="Firebase" class="tools-mobile__img tools-mobile__img--4">
+                        <img src="img/icons8-html-5-500.png" alt="HTML5" class="tools-mobile__img tools-mobile__img--5">
+                        <img src="img/icons8-react-native-500.png" alt="ReactNative" class="tools-mobile__img tools-mobile__img--6">
+                        <img src="img/icons8-developer-500.png" alt="Oderinde Kehinde" class="tools-mobile__img tools-mobile__img--7">
                     </div>
                 </div>
             </div>
@@ -83,28 +97,39 @@
             <div class="u-center-text">
                 <h2 class="section__heading u-mb-large">recent projects</h2>
             </div>
-            <div class="row">
-                <div class="col-1-of-3">
-                    <div class="project">
-                        
+            <div class="projects__row">
+                <div class="project">
+                    <div class="project__header project__header--1">
+                        <img src="./img/eye.png" alt="" class="project__header--icon">
+                        <h1 class="project__header--title">eazy food</h1>
+                    </div>
+                    <div class="project__content">
+                        An e-commerce solution for users to buy food items from the comfort of their devices which i created using HTML5, CSS3, SASS and JavaScript. Also made use of Firebase as the backend so the users could create accounts, login, add food items to favorites, implement an efficient CRUD functionality in the shopping cart.
+                    </div>
+                    <div class="project__footer">
+                        <a href="#preview" id="eazyfood" class="project__footer--btns project__footer--btns--1">Preview</a>
+                        <a href="https://github.com/thepseudomind/eazyfood" target="_blank" class="project__footer--btns project__footer--btns--2">Code Review</a>
                     </div>
                 </div>
-                <div class="col-1-of-3">
-                    <div class="project"></div>
+                <div class="project">
+                    <div class="project__header project__header--2">
+                        <img src="./img/eye.png" alt="" class="project__header--icon">
+                        <h1 class="project__header--title">eazy rent</h1>
+                    </div>
+                    <div class="project__content">
+                        A project built for tenants or home seekers looking to lease a home on a monthly or yearly basis. Built with HTML5, CSS3, ReactJS, NextJS for the development of the frontend. Also used JSON-Server as the temporary server so the users could create and delete listings, add banks for payments, view and edit the banks etc.
+                    </div>
+                    <div class="project__footer">
+                        <a href="#preview" id="eazyrent" class="project__footer--btns project__footer--btns--1">Preview</a>
+                        <a href="https://github.com/thepseudomind/eazyrent-next" target="_blank" class="project__footer--btns project__footer--btns--2">Code Review</a>
+                    </div>
                 </div>
-                <div class="col-1-of-3">
-                    <div class="project"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1-of-3">
-                    <div class="project"></div>
-                </div>
-                <div class="col-1-of-3">
-                    <div class="project"></div>
-                </div>
-                <div class="col-1-of-3">
-                    <div class="project"></div>
+                <div class="project">
+                   <div class="project__info">
+                       <h1 class="project__info--content">
+                           Wanna see other cool projects? Or discuss about the latest ones? Get in touch <a class="project__info--content--link" href="mailto:thepseudomind@gmail.com">here</a>
+                       </h1>
+                   </div>         
                 </div>
             </div>
         </section>
@@ -113,7 +138,7 @@
         </section>
     </main>
     <footer class="footer">
-
+        <p class="footer__credit">&copy; 2020. Built with ❤️ by ThePseudoMind</p>
     </footer>
     <script type="text/javascript" src="js/index.js"></script>
 </body>

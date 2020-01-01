@@ -1,6 +1,10 @@
 .tools{
     position: relative;
 
+    @include respond(phone){
+        display: none;
+    }
+
     &__img{
         width: 30%;
         position: absolute;
@@ -39,6 +43,23 @@
         &--7{
             top: 10rem;
             left: 20rem;
+        }
+    }
+}
+
+.tools-mobile{
+    display: none;
+
+    @include respond(phone){
+        margin-top: 5rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+
+        &__img{
+            width: 15%;
+            animation: oscillate 2s ease-out none infinite;
         }
     }
 }

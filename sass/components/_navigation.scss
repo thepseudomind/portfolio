@@ -13,6 +13,11 @@
         right: 7rem;
         z-index: 1000;
         transition: all .3s;
+
+        @include respond(phone){
+            top: 3rem;
+            right: 3.5rem; 
+        }
     }
 
     &__toggle{
@@ -26,6 +31,11 @@
         box-shadow: 0 .5rem 1rem rgba(black, .2);
         z-index: 1500;
         cursor: pointer;
+
+        @include respond(phone){
+            top: 2.75rem;
+            right: 3.25rem; 
+        }
     }
 
     &__icon, &__icon::before, &__icon::after{

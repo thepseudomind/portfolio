@@ -1,0 +1,40 @@
+.video{
+    height: 45rem;
+    width: 70rem;
+    border-radius: .5rem;
+    background-color: white;
+    outline: none;
+
+    &-popup{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 5000;
+        background-color: rgba(black, .6);
+        transition: all .2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        &:target{
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &__close{
+            color: white;
+
+            &:link, &:active{
+                position: absolute;
+                left: 1rem;
+                top: 1rem;
+                text-decoration: none;
+                font-size: 2rem;
+            }
+        }
+    }
+}
