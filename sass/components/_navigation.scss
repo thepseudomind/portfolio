@@ -93,4 +93,32 @@
     &__toggle:hover &__icon::after{
         top: .9rem;;
     }
+
+    &__menu{
+        position: absolute;
+        top: 50vh;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        color: white;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .2s ease;
+
+        &--items{
+            font-size: 3rem;
+            text-transform: uppercase;
+
+            &:not(:last-child){
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    &__checkbox:checked ~ &__menu{
+        left: 50%;
+        opacity: 1;
+        visibility: visible;
+    }
 }

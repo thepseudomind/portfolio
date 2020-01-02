@@ -5,6 +5,12 @@
     background-color: white;
     outline: none;
 
+    @include respond(tab-port){
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+    }
+
     &-popup{
         position: fixed;
         top: 0;
@@ -14,11 +20,15 @@
         opacity: 0;
         visibility: hidden;
         z-index: 5000;
-        background-color: rgba(black, .6);
+        background-color: rgba(black, .75);
         transition: all .2s ease;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include respond(tab-port){
+            background-color: black;
+        }
     
         &:target{
             opacity: 1;
@@ -30,10 +40,28 @@
 
             &:link, &:active{
                 position: absolute;
-                left: 1rem;
-                top: 1rem;
+                left: 3rem;
+                top: 3rem;
+                height: 5rem;
+                width: 5rem;
+                border-radius: 50%;
                 text-decoration: none;
                 font-size: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: transparent;
+                transition: all .1s ease-in;
+
+                @include respond(tab-port){
+                    left: 1rem;
+                    top: 1rem;
+                    background-color: rgba(grey, .2)
+                }
+            }
+
+            &:hover{
+                background-color: rgba(grey, .2)
             }
         }
     }

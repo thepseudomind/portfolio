@@ -13,17 +13,23 @@
     <!-- POPUP VIDEO -->
     <div class="video-popup" id="preview">
         <video class="video" controls autoplay></video>
-        <a href="#" class="video-popup__close">X</a>
+        <a href="#projects" class="video-popup__close">X</a>
     </div>
 
     <!-- NAVIGATION SYSTEM -->
-    <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="toggle" />
-        <label for="toggle" class="navigation__toggle">
-            <span class="navigation__icon"></span>
-        </label>
-        <div class="navigation__background"></div>
-    </div>
+    <input type="checkbox" class="navigation__checkbox" id="toggle" />
+    <label for="toggle" class="navigation__toggle">
+        <span class="navigation__icon"></span>
+    </label>
+    <div class="navigation__background"></div>
+
+    <!-- NAVIGATION MENU -->
+    <ul class="navigation__menu">
+        <li class="navigation__menu--items">My Resumé</li>
+        <li class="navigation__menu--items">My Work</li>
+        <li class="navigation__menu--items">Publications (Coming Soon)</li>
+        <li class="navigation__menu--items">Contact</li>
+    </ul>
 
     <!-- THEMING SYSTEM -->
     <div class="darkmode">
@@ -43,14 +49,14 @@
                         I'm Oderinde Kehinde
                     </span>
                     <span class="header__text--subtitle u-mb-small" id="text">
-                        i'm a front end developer who designs beautiful user interfaces and web apps.
+                        i'm a front end developer who builds beautiful user interfaces and web apps.
                     </span>
                 </h1>
                 <div class="header__icons">
-                    <span class="header__icons--icon"><i class="fab fa-github"></i></span>
-                    <span class="header__icons--icon"><i class="fab fa-twitter"></i></span>
-                    <span class="header__icons--icon"><i class="fab fa-linkedin-in"></i></span>
-                    <span class="header__icons--icon"><i class="fab fa-instagram"></i></span>
+                    <span><a class="header__icons--icon" href="https://github.com/thepsuedomind"><i class="fab fa-github"></i></a></span>
+                    <span><a class="header__icons--icon" href="https://twitter.com/thepsuedomind"><i class="fab fa-twitter"></i></a></i></span>
+                    <span><a class="header__icons--icon" href="https://instagram.com/thepsuedomind"><i class="fab fa-instagram"></i></a></span>
+                    <span><a class="header__icons--icon" href="#"><i class="fab fa-linkedin-in"></i></a></span>
                 </div>
             </div>
             <div class="header__content--right">
@@ -93,14 +99,14 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <div class="u-center-text">
                 <h2 class="section__heading u-mb-large">recent projects</h2>
             </div>
             <div class="projects__row">
                 <div class="project">
                     <div class="project__header project__header--1">
-                        <img src="./img/eye.png" alt="" class="project__header--icon">
+                        <!-- <img src="./img/eye.png" alt="" class="project__header--icon"> -->
                         <h1 class="project__header--title">eazy food</h1>
                     </div>
                     <div class="project__content">
@@ -113,7 +119,7 @@
                 </div>
                 <div class="project">
                     <div class="project__header project__header--2">
-                        <img src="./img/eye.png" alt="" class="project__header--icon">
+                        <!-- <img src="./img/eye.png" alt="" class="project__header--icon"> -->
                         <h1 class="project__header--title">eazy rent</h1>
                     </div>
                     <div class="project__content">
@@ -134,11 +140,28 @@
             </div>
         </section>
         <section class="contact">
-
+            <div class="contact__content">
+                <div class="contact__content--left">
+                    <h2 class="contact__title" id="title">Get in touch</h2>
+                    <p class="contact__greeting" id="greeting">
+                        Hello, my name is <input class="contact__form--input" placeholder="John/Julie" id="name"/> from <input class="contact__form--input" placeholder="XYZ Corp." id="company"/>. I am reaching out to you because
+                        <select class="contact__form--dropdown" id="work">
+                            <option value="none"></option>
+                            <option value="employment">i want to employ you</option>
+                            <option value="partnership">i want to partner on a project</option>
+                            <option value="appreciation">i just appreciate your work</option>
+                        </select>. Kindly get back in touch as soon as possible. Thanks
+                    </p>
+                    <a href="#" class="contact__btn">Submit 🙂</a>
+                </div>
+                <div class="contact__content--right">
+                    <img src="./img/space.png" alt="Working" class="contact__illustration">
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
-        <p class="footer__credit">&copy; 2020. Built with ❤️ by ThePseudoMind</p>
+        <p class="footer__credit">&copy; <span id="year"></span>. Built with ❤️ by ThePseudoMind</p>
     </footer>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
