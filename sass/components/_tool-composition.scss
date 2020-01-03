@@ -4,7 +4,7 @@
     @include respond(phone){
         display: none;
     }
-    
+
     @include respond(tab-port){
         display: none;
     }
@@ -63,6 +63,7 @@
 
         &__img{
             width: 15%;
+            height: 100%;
             animation: oscillate 2s ease-out none infinite;
         }
     }

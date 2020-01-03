@@ -317,6 +317,7 @@ body {
       justify-content: space-around; }
       .tools-mobile__img {
         width: 15%;
+        height: 100%;
         animation: oscillate 2s ease-out none infinite; } }
 
 .video {
@@ -325,15 +326,15 @@ body {
   border-radius: .5rem;
   background-color: white;
   outline: none; }
-  @media (max-width: 37.5em) {
-    .video {
-      width: 100%;
-      height: 25rem;
-      object-fit: cover; } }
   @media (max-width: 50em) {
     .video {
-      width: 100%;
-      height: 60rem;
+      width: 100vw;
+      height: 45rem;
+      object-fit: cover; } }
+  @media (max-width: 37.5em) {
+    .video {
+      width: 100vw;
+      height: 25rem;
       object-fit: cover; } }
   .video-popup {
     position: fixed;
