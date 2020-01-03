@@ -9,7 +9,7 @@
     overflow: hidden;
     transition: all .2s ease;
 
-    @include respond(phone){
+    @include respond(tab-port){
         height: 45rem;
         width: 37.5rem;
         

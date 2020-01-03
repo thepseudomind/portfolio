@@ -54,6 +54,32 @@ const uiController = (()=>{
         },
         closeNavAndNavigate : (e)=>{
             document.getElementById('toggle').checked = false;
+        },
+        submitContactForm: (e)=>{
+            e.preventDefault();
+            if(document.getElementById('name').value && document.getElementById('company').value && document.getElementById('work').value){
+                console.log("submitting form");
+                document.querySelector('.contact__error').textContent = "";
+                ['name', 'company', 'work'].forEach(e => document.getElementById(e).style.borderBottom = `.15rem solid ${darkMode ? 'white' : 'black'}`);
+                document.getElementById('greeting').reset();
+            }else{
+                switch (true) {
+                    case !document.getElementById('name').value:
+                        document.getElementById('name').style.borderBottom = ".15rem solid red";
+                        document.querySelector('.contact__error').textContent = "Please enter your name";
+                        break;
+                
+                    case !document.getElementById('company').value:
+                        document.getElementById('company').style.borderBottom = ".15rem solid red";
+                        document.querySelector('.contact__error').textContent = "Please indicate the company you work for";
+                        break;
+
+                    case !document.getElementById('work').value:
+                        document.getElementById('work').style.borderBottom = ".15rem solid red";
+                        document.querySelector('.contact__error').textContent = "Please choose a reason for reaching out";
+                        break;
+                }
+            }
         }
     }
 })();
@@ -66,11 +92,16 @@ const controller = ((uiCtrl)=>{
             document.getElementById(e).addEventListener('click', uiCtrl.toggleVideoMode);
         });
         Array.from(document.querySelectorAll('.navigation__menu--items--link')).forEach(e => e.addEventListener('click', uiCtrl.closeNavAndNavigate));
+        document.getElementById('submit-btn').addEventListener('click', uiCtrl.submitContactForm);
+    }
+
+    const getCurrentYear = ()=>{
+        document.getElementById('year').textContent = new Date().getFullYear();
     }
 
     return {
         init: ()=>{
-            document.getElementById('year').textContent = new Date().getFullYear();
+            getCurrentYear();
             setupEventListeners();
         }
     }

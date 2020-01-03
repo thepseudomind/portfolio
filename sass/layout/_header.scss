@@ -9,7 +9,7 @@
     align-items: center;
     transition: all .2s ease;
 
-    @include respond(phone){
+    @include respond(tab-port){
         height: 70vh;
     }
 
@@ -23,7 +23,7 @@
         &--left, &--right{
             flex: 0 0 45%;
             
-            @include respond(phone){
+            @include respond(tab-port){
                 display: flex;
                 flex: 0 0 75%;
                 flex-direction: column;
@@ -35,7 +35,7 @@
             display: flex;
             justify-content: center;
 
-            @include respond(phone){
+            @include respond(tab-port){
                 display: none;
             }
         }
@@ -43,7 +43,7 @@
 
 
     &__text{
-        @include respond(phone){
+        @include respond(tab-port){
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -55,7 +55,7 @@
             font-size: 4rem;
             margin-bottom: 1rem;
 
-            @include respond(phone){
+            @include respond(tab-port){
                 font-size: 3.5rem;
                 margin-bottom: .5rem;
             }
@@ -66,7 +66,7 @@
             font-size: 5rem;
             line-height: 1;
 
-            @include respond(phone){
+            @include respond(tab-port){
                 text-align: center;
                 font-size: 4rem;
             }
@@ -77,7 +77,7 @@
             font-size: 2.5rem;
             font-family: 'Share Tech Mono', monospace;
 
-            @include respond(phone){
+            @include respond(tab-port){
                 text-align: center;
                 font-size: 2rem;
             }

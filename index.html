@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Oderinde Olayemi</title>
+    <title>The ThePseudoMind</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/fontawesome/css/all.css">
     <link rel="stylesheet" href="css/index.css">
@@ -25,7 +25,7 @@
 
     <!-- NAVIGATION MENU -->
     <ul class="navigation__menu">
-        <li class="navigation__menu--items"><a href="#" class="navigation__menu--items--link">My Resumé</a></li>
+        <li class="navigation__menu--items"><a href="#" target="_blank" class="navigation__menu--items--link">My Resumé</a></li>
         <li class="navigation__menu--items"><a href="#projects" class="navigation__menu--items--link">My Work</a></li>
         <li class="navigation__menu--items"><a href="#" class="navigation__menu--items--link">Publications (Coming Soon)</a></li>
         <li class="navigation__menu--items"><a href="#contact" class="navigation__menu--items--link">Contact</a></li>
@@ -53,9 +53,9 @@
                     </span>
                 </h1>
                 <div class="header__icons">
-                    <span><a class="header__icons--icon" href="https://github.com/thepsuedomind"><i class="fab fa-github"></i></a></span>
-                    <span><a class="header__icons--icon" href="https://twitter.com/thepsuedomind"><i class="fab fa-twitter"></i></a></i></span>
-                    <span><a class="header__icons--icon" href="https://instagram.com/thepsuedomind"><i class="fab fa-instagram"></i></a></span>
+                    <span><a class="header__icons--icon" href="https://github.com/thepsuedomind" target="_blank"><i class="fab fa-github"></i></a></span>
+                    <span><a class="header__icons--icon" href="https://twitter.com/thepsuedomind" target="_blank"><i class="fab fa-twitter"></i></a></i></span>
+                    <span><a class="header__icons--icon" href="https://instagram.com/thepsuedomind" target="_blank"><i class="fab fa-instagram"></i></a></span>
                     <span><a class="header__icons--icon" href="#"><i class="fab fa-linkedin-in"></i></a></span>
                 </div>
             </div>
@@ -143,16 +143,17 @@
             <div class="contact__content">
                 <div class="contact__content--left">
                     <h2 class="contact__title" id="title">Get in touch</h2>
-                    <p class="contact__greeting" id="greeting">
-                        Hello, my name is <input class="contact__form--input" placeholder="John/Julie" id="name"/> from <input class="contact__form--input" placeholder="XYZ Corp." id="company"/>. I am reaching out to you because
+                    <form class="contact__greeting" id="greeting">
+                        Hello, my name is <input class="contact__form--input" placeholder="John/Julie" id="name" autocomplete="off"/> from <input class="contact__form--input" placeholder="XYZ Corp." id="company"  autocomplete="off"/>. I am reaching out to you because
                         <select class="contact__form--dropdown" id="work">
-                            <option value="none"></option>
+                            <option value=""></option>
                             <option value="employment">i want to employ you</option>
                             <option value="partnership">i want to partner on a project</option>
                             <option value="appreciation">i just appreciate your work</option>
                         </select>. Kindly get back in touch as soon as possible. Thanks
-                    </p>
-                    <a href="#" class="contact__btn">Submit 🙂</a>
+                    </form>
+                    <a href="#" class="contact__btn" id="submit-btn">Submit 🙂</a>
+                    <span class="contact__error"></span>
                 </div>
                 <div class="contact__content--right">
                     <img src="./img/space.png" alt="Working" class="contact__illustration">

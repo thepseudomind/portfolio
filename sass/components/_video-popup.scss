@@ -5,9 +5,15 @@
     background-color: white;
     outline: none;
 
-    @include respond(tab-port){
+    @include respond(phone){
         width: 100%;
         height: 25rem;
+        object-fit: cover;
+    }
+
+    @include respond(tab-port){
+        width: 100%;
+        height: 60rem;
         object-fit: cover;
     }
 
