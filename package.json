@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Portfolio",
   "main": "index.js",
+  "homepage" : "https://thepseudomind.github.io/portfolio",
   "scripts": {
+    "deploy": "gh-pages -d",
     "compile-sass": "node-sass sass/main.scss css/index.css -w"
   },
   "author": "Oderinde Olayemi",

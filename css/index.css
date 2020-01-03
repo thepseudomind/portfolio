@@ -155,9 +155,9 @@ body {
   top: .9rem; }
 
 .navigation__menu {
-  position: absolute;
+  position: fixed;
   top: 50vh;
-  left: 20%;
+  left: 10%;
   transform: translate(-50%, -50%);
   list-style: none;
   color: white;
@@ -165,11 +165,21 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all .2s ease; }
-  .navigation__menu--items {
-    font-size: 3rem;
-    text-transform: uppercase; }
-    .navigation__menu--items:not(:last-child) {
-      margin-bottom: 4rem; }
+  .navigation__menu--items:not(:last-child) {
+    margin-bottom: 5rem; }
+  .navigation__menu--items--link {
+    color: white; }
+    .navigation__menu--items--link:link, .navigation__menu--items--link:active {
+      font-size: 3rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all .3s ease;
+      padding: 1rem;
+      background-color: transparent; }
+    .navigation__menu--items--link:hover {
+      padding: 1rem;
+      background-color: white;
+      color: black; }
 
 .navigation__checkbox:checked ~ .navigation__menu {
   left: 50%;
@@ -203,9 +213,9 @@ body {
     align-items: center;
     position: relative; }
     .project__header--1 {
-      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("../../img/food.png"); }
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("../img/food.png"); }
     .project__header--2 {
-      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("../../img/rent.png"); }
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("../img/rent.png"); }
     .project__header--title {
       color: white;
       text-transform: capitalize;
@@ -485,7 +495,7 @@ body {
   padding: 15rem 0 20rem 0;
   border-radius: .5rem;
   background: linear-gradient(90deg, #ee9ca7 0%, #ffdde1 100%);
-  transition: all .3s; }
+  transition: all .3s ease; }
   .projects__row {
     margin: 0 auto;
     width: 114rem;

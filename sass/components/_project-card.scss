@@ -30,11 +30,11 @@
         position: relative;
 
         &--1{
-            background-image: linear-gradient(to right bottom, rgba(black, .75), rgba(black, .5)), url('../../img/food.png');
+            background-image: linear-gradient(to right bottom, rgba(black, .75), rgba(black, .5)), url('../img/food.png');
         }
 
         &--2{
-            background-image: linear-gradient(to right bottom, rgba(black, .75), rgba(black, .5)), url('../../img/rent.png');
+            background-image: linear-gradient(to right bottom, rgba(black, .75), rgba(black, .5)), url('../img/rent.png');
         }
 
         &--title{

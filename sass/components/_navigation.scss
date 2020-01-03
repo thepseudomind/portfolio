@@ -95,9 +95,9 @@
     }
 
     &__menu{
-        position: absolute;
+        position: fixed;
         top: 50vh;
-        left: 20%;
+        left: 10%;
         transform: translate(-50%, -50%);
         list-style: none;
         color: white;
@@ -107,11 +107,27 @@
         transition: all .2s ease;
 
         &--items{
-            font-size: 3rem;
-            text-transform: uppercase;
-
             &:not(:last-child){
-                margin-bottom: 4rem;
+                margin-bottom: 5rem;
+            }
+
+            &--link{
+                color: white;
+
+                &:link, &:active{
+                    font-size: 3rem;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    transition: all .3s ease;
+                    padding: 1rem;
+                    background-color: transparent;
+                }
+
+                &:hover{
+                    padding: 1rem;
+                    background-color: white;
+                    color: black;
+                }
             }
         }
     }

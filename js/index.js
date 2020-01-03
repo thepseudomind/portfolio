@@ -51,6 +51,9 @@ const uiController = (()=>{
             }else if(e.target.id === 'eazyrent'){
                 document.querySelector('video').src = "./img/eazyrent.mp4";
             }
+        },
+        closeNavAndNavigate : (e)=>{
+            document.getElementById('toggle').checked = false;
         }
     }
 })();
@@ -61,7 +64,8 @@ const controller = ((uiCtrl)=>{
         darkModeBtn.addEventListener('click', uiCtrl.changeTheme);
         ['eazyfood', 'eazyrent'].forEach((e)=>{
             document.getElementById(e).addEventListener('click', uiCtrl.toggleVideoMode);
-        })
+        });
+        Array.from(document.querySelectorAll('.navigation__menu--items--link')).forEach(e => e.addEventListener('click', uiCtrl.closeNavAndNavigate));
     }
 
     return {

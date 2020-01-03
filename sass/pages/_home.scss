@@ -47,7 +47,7 @@
     border-radius: .5rem;
     // background:linear-gradient(90deg, #cc2b5e 0%,#753a88 100% );
     background:linear-gradient(90deg, #ee9ca7 0%,#ffdde1 100% );
-    transition: all .3s;
+    transition: all .3s ease;
 
     &__row{
         margin: 0 auto;
@@ -61,8 +61,6 @@
             flex-direction: column;
         }
     }
-
-    
 }
 
 .contact{
